@@ -134,9 +134,9 @@
                 <li>
                     <a class="nav-link" th:href="@{/wingman/cua-hang}">Sản phẩm</a>
                 </li>
-                <li><a class="nav-link" th:href="@{/wingman/dich-vu}">Dịch vụ</a></li>
-                <li><a class="nav-link" th:href="@{/wingman/thong-tin}">Thông tin</a></li>
-                <li><a class="nav-link" th:href="@{/wingman/lien-he}">Liên hệ</a></li>
+<!--                <li><a class="nav-link" th:href="@{/wingman/dich-vu}">Dịch vụ</a></li>-->
+<!--                <li><a class="nav-link" th:href="@{/wingman/thong-tin}">Thông tin</a></li>-->
+<!--                <li><a class="nav-link" th:href="@{/wingman/lien-he}">Liên hệ</a></li>-->
                 <li><a class="nav-link" th:href="@{/wingman/tra-cuu-don-hang}">Tra cứu đơn hàng</a></li>
 
             </ul>
@@ -230,24 +230,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 main-content-wrapper">
-                <div class="container-fluid pt-4">
-                    <div class="row">
-                        <ul class="nav nav-tabs">
-                            <button class="nav-link">
-                                <a th:href="'/wingman/hoa-don-cua-toi'">Tất cả</a>
-                            </button>
-                            <li class="nav-item" th:each="tt : ${trangThais}">
-                                <button th:class="'nav-link ' + (${trangThai} == ${tt} ? 'active' : '')"
-                                        id="nav-home-tab"
-                                        data-bs-toggle="tab" type="button">
-                                    <a th:href="'/wingman/hoa-don-cua-toi/'+ ${tt}"
-                                       th:text="${tt.getDisplayName()}"></a>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+<!--            <div class="col-lg-9 main-content-wrapper">-->
+<!--                <div class="container-fluid pt-4">-->
+<!--                    <div class="row">-->
+<!--                        <ul class="nav nav-tabs">-->
+<!--                            <button class="nav-link">-->
+<!--                                <a th:href="'/wingman/hoa-don-cua-toi'">Tất cả</a>-->
+<!--                            </button>-->
+<!--                            <li class="nav-item" th:each="tt : ${trangThais}">-->
+<!--                                <button th:class="'nav-link ' + (${trangThai} == ${tt} ? 'active' : '')"-->
+<!--                                        id="nav-home-tab"-->
+<!--                                        data-bs-toggle="tab" type="button">-->
+<!--                                    <a th:href="'/wingman/hoa-don-cua-toi/'+ ${tt}"-->
+<!--                                       th:text="${tt.getDisplayName()}"></a>-->
+<!--                                </button>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <style>
                     /* Remove underline from <a> tags within buttons in the nav-tabs */
                     .nav-tabs button a {
@@ -332,32 +332,6 @@
 <!-- Start Footer Section -->
 <footer class="footer-section">
     <div class="container relative">
-
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="subscription-form">
-                    <h3 class="d-flex align-items-center"><span class="me-1"><img src="/../images/envelope-outline.svg"
-                                                                                  alt="Image"
-                                                                                  class="img-fluid"></span><span>Đăng ký nhận thông tin khuyến Mại</span>
-                    </h3>
-
-                    <form action="#" class="row g-3">
-                        <div class="col-auto">
-                            <input type="text" class="form-control" placeholder="Họ và tên">
-                        </div>
-                        <div class="col-auto">
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="col-auto">
-                            <button class="btn btn-primary">
-                                <span class="fa fa-paper-plane"></span>
-                            </button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
 
         <div class="row g-5 mb-5">
             <div class="col-lg-4">

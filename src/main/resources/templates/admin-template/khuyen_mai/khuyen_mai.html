@@ -153,13 +153,7 @@
                         <a th:href="@{/admin/san-pham}" class="dropdown-item">Sản Phẩm</a>
                         <a th:href="@{/admin/chi-tiet-san-pham}" class="dropdown-item">Chi Tiết Sản
                             Phẩm</a>
-<!--                        <a th:href="@{/admin/dong-san-pham}" class="dropdown-item">Dòng Sản Phẩm</a>-->
-<!--                        <a th:href="@{/admin/thuong-hieu}" class="dropdown-item">Thương Hiệu</a>-->
-<!--                        <a th:href="@{/admin/mau-sac}" class="dropdown-item">Màu Sắc</a>-->
-<!--                        <a th:href="@{/admin/kich-thuoc}" class="dropdown-item">Kích Thước</a>-->
-<!--                        <a th:href="@{/admin/de-giay}" class="dropdown-item">Đế Giày</a>-->
-<!--                        <a th:href="@{/admin/lot-giay}" class="dropdown-item">Lót Giày</a>-->
-<!--                        <a th:href="@{/admin/co-giay}" class="dropdown-item">Cổ Giày</a>-->
+
                     </div>
                 </div>
                 <a th:href="@{/admin/hoa-don}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Hóa Đơn</a>
@@ -218,61 +212,49 @@
                         <a th:href="@{/admin/khuyen-mai/view-add}">Thêm</a>
                     </button>
                 </div>
-                <ul class="nav nav-tabs">
-                    <button class="nav-link">
-                        <a href="/admin/khuyen-mai">Tất cả</a>
-                    </button>
-                    <li class="nav-item" th:each="tt : ${listTrangThai}">
-                        <button th:class="'nav-link ' + (${trangThai} == ${tt} ? 'active' : '')" id="nav-home-tab"
-                                data-bs-toggle="tab" type="button" onclick="setHiddenValue('${tt}')">
-                            <a th:href="@{/admin/khuyen-mai/trang-thai/{status}(status=${tt})}"
-                               th:text="${tt.getDisplayName()}"></a>
-                        </button>
-                    </li>
-                </ul>
             </div>
-            <div class="row g-2">
-                <form th:action="@{/admin/khuyen-mai/filter}" method="get" onsubmit="return validateDate()">
-                    <div class="container-fluid pt-3">
-                        <input type="hidden" id="hiddenTrangThai" name="trangThai" th:value="${trangThai}"/>
-                        <div class="row g-2">
-                            <div class="col-md-4">
-                                <!-- Ngày bắt đầu -->
-                                <label class="sr-only" for="start7">Ngày bắt đầu</label>
-                                <div class="input-group mb-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">Ngày bắt đầu</div>
-                                    </div>
-                                    <input type="date" class="form-control" name="startDate" id="start7"
-                                           th:value="${startDate}">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <!-- Ngày kết thúc -->
-                                <label class="sr-only" for="end7">Ngày kết thúc</label>
-                                <div class="input-group mb-2">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">Ngày kết thúc</div>
-                                    </div>
-                                    <input type="date" class="form-control" name="endDate" id="end7"
-                                           th:value="${endDate}">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <!-- Button thứ nhất -->
-                                <button type="submit" class="btn btn-outline-info" style="width: 100%"><i class="bi bi-search"></i>Tìm Kiếm</button>
-                            </div>
-                            <div class="col-md-2">
-                                <!-- Button thứ hai -->
-                                <a class="btn btn-outline-info" href="/admin/khuyen-mai"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                                    <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                                    <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
-                                </svg>Làm mới</a>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+<!--            <div class="row g-2">-->
+<!--                <form th:action="@{/admin/khuyen-mai/filter}" method="get" onsubmit="return validateDate()">-->
+<!--                    <div class="container-fluid pt-3">-->
+<!--                        <input type="hidden" id="hiddenTrangThai" name="trangThai" th:value="${trangThai}"/>-->
+<!--                        <div class="row g-2">-->
+<!--                            <div class="col-md-4">-->
+<!--                                &lt;!&ndash; Ngày bắt đầu &ndash;&gt;-->
+<!--                                <label class="sr-only" for="start7">Ngày bắt đầu</label>-->
+<!--                                <div class="input-group mb-2">-->
+<!--                                    <div class="input-group-prepend">-->
+<!--                                        <div class="input-group-text">Ngày bắt đầu</div>-->
+<!--                                    </div>-->
+<!--                                    <input type="date" class="form-control" name="startDate" id="start7"-->
+<!--                                           th:value="${startDate}">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-4">-->
+<!--                                &lt;!&ndash; Ngày kết thúc &ndash;&gt;-->
+<!--                                <label class="sr-only" for="end7">Ngày kết thúc</label>-->
+<!--                                <div class="input-group mb-2">-->
+<!--                                    <div class="input-group-prepend">-->
+<!--                                        <div class="input-group-text">Ngày kết thúc</div>-->
+<!--                                    </div>-->
+<!--                                    <input type="date" class="form-control" name="endDate" id="end7"-->
+<!--                                           th:value="${endDate}">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-2">-->
+<!--                                &lt;!&ndash; Button thứ nhất &ndash;&gt;-->
+<!--                                <button type="submit" class="btn btn-outline-info" style="width: 100%"><i class="bi bi-search"></i>Tìm Kiếm</button>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-2">-->
+<!--                                &lt;!&ndash; Button thứ hai &ndash;&gt;-->
+<!--                                <a class="btn btn-outline-info" href="/admin/khuyen-mai"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">-->
+<!--                                    <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>-->
+<!--                                    <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>-->
+<!--                                </svg>Làm mới</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
         </div>
 
         <div class="container-fluid pt-4">
