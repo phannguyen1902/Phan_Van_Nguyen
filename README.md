@@ -1,5 +1,6 @@
 # Báo cáo đồ án
-[Nguyễn Thị Thủy_Báo cáo đồ án.docx](https://github.com/user-attachments/files/15521780/Nguy.n.Th.Th.y_Bao.cao.d.an.docx)
-
+[HTTT_2020606056_Nguyen_Thi_Thuy_Bao_cao.pdf](https://github.com/user-attachments/files/15755199/HTTT_2020606056_Nguyen_Thi_Thuy_Bao_cao.pdf)
 # Poster
-[Poster đồ án.pdf](https://github.com/thuy110802/NguyenThiThuy/files/15492675/Poster.d.an.pdf)
+[HTTT_2020606056_Nguyen_Thi_Thuy_Poster.pdf](https://github.com/user-attachments/files/15755201/HTTT_2020606056_Nguyen_Thi_Thuy_Poster.pdf)
+# Slide
+[HTTT_2020606056_Nguyen_Thi_Thuy_Slide.pdf](https://github.com/user-attachments/files/15755206/HTTT_2020606056_Nguyen_Thi_Thuy_Slide.pdf)
